@@ -1,0 +1,1530 @@
+{
+  "tag_separator": ",",
+  "dataset_sets": [
+    {
+      "set_name": "FSD50K.dev",
+      "input_csv": "<YOUR_PATH>/FSD50K/FSD50K.ground_truth/dev.csv",
+      "audio_dir": "<YOUR_PATH>/FSD50K/FSD50K.dev_audio",
+      "output_classified_csv": "FSD50K.dev_UCS_classified.csv",
+      "output_unclassified_csv": "FSD50K.dev_UCS_unclassified.csv",
+      "output_unclassified_summary": "FSD50K.dev_unclassified_summary.csv"
+    },
+    {
+      "set_name": "FSD50K.eval",
+      "input_csv": "<YOUR_PATH>/FSD50K/FSD50K.ground_truth/eval.csv",
+      "audio_dir": "<YOUR_PATH>/FSD50K/FSD50K.eval_audio",
+      "output_classified_csv": "FSD50K.eval_UCS_classified.csv",
+      "output_unclassified_csv": "FSD50K.eval_UCS_unclassified.csv",
+      "output_unclassified_summary": "FSD50K.eval_unclassified_summary.csv"
+    },
+    {
+      "set_name": "AudioSet.balanced_train",
+      "input_csv": "<YOUR_PATH>/AudioSet/audioset_balanced_train_preprocessed.csv",
+      "audio_dir": "<YOUR_PATH>/AudioSet/audios/balanced_train_segments",
+      "output_classified_csv": "AudioSet.balanced_train_UCS_classified.csv",
+      "output_unclassified_csv": "AudioSet.balanced_train_UCS_unclassified.csv",
+      "output_unclassified_summary": "AudioSet.balanced_train_unclassified_summary.csv"
+    },
+    {
+      "set_name": "AudioSet.eval",
+      "input_csv": "<YOUR_PATH>/AudioSet/audioset_eval_preprocessed.csv",
+      "audio_dir": "<YOUR_PATH>/AudioSet/audios/eval_segments",
+      "output_classified_csv": "AudioSet.eval_UCS_classified.csv",
+      "output_unclassified_csv": "AudioSet.eval_UCS_unclassified.csv",
+      "output_unclassified_summary": "AudioSet.eval_unclassified_summary.csv"
+    }
+  ],
+  "audio_paths": {
+    "audio_extension": ".wav"
+  },
+  "ucs_paths": {
+    "structure_csv": "UCS_v8.2.1_Full_List.csv"
+  },
+  "column_names": {
+    "fsd50k_tags_column": "labels",
+    "fsd50k_fname_column": "fname",
+    "ucs_category_column": "Category",
+    "ucs_subcategory_column": "SubCategory",
+    "ucs_keywords_column": "Keywords",
+    "output_columns": {
+      "filename": "filename",
+      "category": "Category",
+      "subcategory": "SubCategory",
+      "tags": "Keywords"
+    }
+  },
+  "defaults": {
+    "default_category": "MISCELLANEOUS"
+  },
+  "log_level": "INFO",
+  "manual_mapping": {
+    "Speech": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Male speech": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Female speech": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Child speech": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Conversation": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Narration": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Babbling": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Shout": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Yell": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Screaming": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Whispering": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Laughter": {
+      "Category": "VOICES",
+      "SubCategory": "LAUGH"
+    },
+    "Baby laughter": {
+      "Category": "VOICES",
+      "SubCategory": "LAUGH"
+    },
+    "Giggle": {
+      "Category": "VOICES",
+      "SubCategory": "LAUGH"
+    },
+    "Crying": {
+      "Category": "VOICES",
+      "SubCategory": "CRYING"
+    },
+    "Baby cry": {
+      "Category": "VOICES",
+      "SubCategory": "CRYING"
+    },
+    "Singing": {
+      "Category": "VOICES",
+      "SubCategory": "SINGING"
+    },
+    "Humming": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Rapping": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Chant": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Whistling": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Beatboxing": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Mantra": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Wail": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Child singing": {
+      "Category": "VOICES",
+      "SubCategory": "SINGING"
+    },
+    "Groan": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Grunt": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Speech synthesizer": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Human_voice": {
+      "Category": "VOICES",
+      "SubCategory": null
+    },
+    "Walk": {
+      "Category": "FOOTSTEPS",
+      "SubCategory": null
+    },
+    "Run": {
+      "Category": "FOOTSTEPS",
+      "SubCategory": null
+    },
+    "Shuffle": {
+      "Category": "FOOTSTEPS",
+      "SubCategory": null
+    },
+    "Footsteps": {
+      "Category": "FOOTSTEPS",
+      "SubCategory": null
+    },
+    "Walk_and_footsteps": {
+      "Category": "FOOTSTEPS",
+      "SubCategory": null
+    },
+    "Breathing": {
+      "Category": "HUMAN",
+      "SubCategory": "BREATH"
+    },
+    "Snoring": {
+      "Category": "HUMAN",
+      "SubCategory": "SNORE"
+    },
+    "Cough": {
+      "Category": "HUMAN",
+      "SubCategory": "COUGH"
+    },
+    "Sneeze": {
+      "Category": "HUMAN",
+      "SubCategory": "SNEEZE"
+    },
+    "Gasp": {
+      "Category": "HUMAN",
+      "SubCategory": null
+    },
+    "Burping": {
+      "Category": "HUMAN",
+      "SubCategory": "BURP"
+    },
+    "Burping_and_eructation": {
+      "Category": "HUMAN",
+      "SubCategory": "BURP"
+    },
+    "Hiccup": {
+      "Category": "HUMAN",
+      "SubCategory": null
+    },
+    "Chewing": {
+      "Category": "HUMAN",
+      "SubCategory": "EATING"
+    },
+    "Sigh": {
+      "Category": "HUMAN",
+      "SubCategory": null
+    },
+    "Snort": {
+      "Category": "HUMAN",
+      "SubCategory": null
+    },
+    "Clapping": {
+      "Category": "HUMAN",
+      "SubCategory": null
+    },
+    "Gargling": {
+      "Category": "HUMAN",
+      "SubCategory": null
+    },
+    "Respiratory_sounds": {
+      "Category": "HUMAN",
+      "SubCategory": null
+    },
+    "Fart": {
+      "Category": "FARTS",
+      "SubCategory": null
+    },
+    "Dog": {
+      "Category": "ANIMALS",
+      "SubCategory": "DOG"
+    },
+    "Bark": {
+      "Category": "ANIMALS",
+      "SubCategory": "DOG"
+    },
+    "Cat": {
+      "Category": "ANIMALS",
+      "SubCategory": "CAT DOMESTIC"
+    },
+    "Meow": {
+      "Category": "ANIMALS",
+      "SubCategory": "CAT DOMESTIC"
+    },
+    "Animal": {
+      "Category": "ANIMALS",
+      "SubCategory": null
+    },
+    "Domestic animals": {
+      "Category": "ANIMALS",
+      "SubCategory": null
+    },
+    "Livestock": {
+      "Category": "ANIMALS",
+      "SubCategory": null
+    },
+    "Wild animals": {
+      "Category": "ANIMALS",
+      "SubCategory": null
+    },
+    "Horse": {
+      "Category": "ANIMALS",
+      "SubCategory": "HORSE"
+    },
+    "Pig": {
+      "Category": "ANIMALS",
+      "SubCategory": null
+    },
+    "Insect": {
+      "Category": "ANIMALS",
+      "SubCategory": "INSECT"
+    },
+    "Frog": {
+      "Category": "ANIMALS",
+      "SubCategory": "AMPHIBIAN"
+    },
+    "Rodents": {
+      "Category": "ANIMALS",
+      "SubCategory": "RODENT"
+    },
+    "Mouse": {
+      "Category": "ANIMALS",
+      "SubCategory": "RODENT"
+    },
+    "Whale vocalization": {
+      "Category": "ANIMALS",
+      "SubCategory": null
+    },
+    "Bleat": {
+      "Category": "ANIMALS",
+      "SubCategory": null
+    },
+    "Snake": {
+      "Category": "ANIMALS",
+      "SubCategory": "REPTILE"
+    },
+    "Sheep": {
+      "Category": "ANIMALS",
+      "SubCategory": null
+    },
+    "Purr": {
+      "Category": "ANIMALS",
+      "SubCategory": "CAT DOMESTIC"
+    },
+    "Patter": {
+      "Category": "ANIMALS",
+      "SubCategory": "RODENT"
+    },
+    "Bird": {
+      "Category": "BIRDS",
+      "SubCategory": null
+    },
+    "Bird vocalization": {
+      "Category": "BIRDS",
+      "SubCategory": null
+    },
+    "Owl": {
+      "Category": "BIRDS",
+      "SubCategory": null
+    },
+    "Crow": {
+      "Category": "BIRDS",
+      "SubCategory": "CROW"
+    },
+    "Pigeon": {
+      "Category": "BIRDS",
+      "SubCategory": null
+    },
+    "Squawk": {
+      "Category": "BIRDS",
+      "SubCategory": null
+    },
+    "Bird flight": {
+      "Category": "BIRDS",
+      "SubCategory": null
+    },
+    "Music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Musical instrument": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Pop music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Hip hop music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Rock music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Heavy metal": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Jazz": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Classical music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Electronic music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Country": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Blues": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Reggae": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Folk music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Soul music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Funk": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Disco": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Song": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Wind instrument": {
+      "Category": "MUSICAL",
+      "SubCategory": "WOODWIND"
+    },
+    "Brass instrument": {
+      "Category": "MUSICAL",
+      "SubCategory": "BRASS"
+    },
+    "Pizzicato": {
+      "Category": "MUSICAL",
+      "SubCategory": "PLUCKED"
+    },
+    "Keyboard": {
+      "Category": "MUSICAL",
+      "SubCategory": "KEYED"
+    },
+    "Organ": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Bowed string instrument": {
+      "Category": "MUSICAL",
+      "SubCategory": "STRINGED"
+    },
+    "Piano": {
+      "Category": "MUSICAL",
+      "SubCategory": "KEYED"
+    },
+    "French horn": {
+      "Category": "MUSICAL",
+      "SubCategory": "BRASS"
+    },
+    "Hammond organ": {
+      "Category": "MUSICAL",
+      "SubCategory": "KEYED"
+    },
+    "Harmonica": {
+      "Category": "MUSICAL",
+      "SubCategory": "WOODWIND"
+    },
+    "Cello": {
+      "Category": "MUSICAL",
+      "SubCategory": "STRINGED"
+    },
+    "Bagpipes": {
+      "Category": "MUSICAL",
+      "SubCategory": "WOODWIND"
+    },
+    "Double bass": {
+      "Category": "MUSICAL",
+      "SubCategory": "STRINGED"
+    },
+    "Harp": {
+      "Category": "MUSICAL",
+      "SubCategory": "PLUCKED"
+    },
+    "String section": {
+      "Category": "MUSICAL",
+      "SubCategory": "STRINGED"
+    },
+    "Saxophone": {
+      "Category": "MUSICAL",
+      "SubCategory": "WOODWIND"
+    },
+    "Electronic organ": {
+      "Category": "MUSICAL",
+      "SubCategory": "KEYED"
+    },
+    "Tuning fork": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Electric piano": {
+      "Category": "MUSICAL",
+      "SubCategory": "KEYED"
+    },
+    "Singing bowl": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Tubular bells": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Marimba": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Glockenspiel": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Mallet percussion": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Accordion": {
+      "Category": "MUSICAL",
+      "SubCategory": "KEYED"
+    },
+    "Orchestra": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Clarinet": {
+      "Category": "MUSICAL",
+      "SubCategory": "WOODWIND"
+    },
+    "Hi-hat": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Cymbal": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Timpani": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Psychedelic rock": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Drum machine": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "New-age music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Trance music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Theremin": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "A capella": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Vocal music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Grunge": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Progressive rock": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Cowbell": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Ambient music": {
+      "Category": "MUSICAL",
+      "SubCategory": null
+    },
+    "Car": {
+      "Category": "VEHICLES",
+      "SubCategory": "CAR"
+    },
+    "Vehicle": {
+      "Category": "VEHICLES",
+      "SubCategory": null
+    },
+    "Truck": {
+      "Category": "VEHICLES",
+      "SubCategory": "TRUCK VAN & SUV"
+    },
+    "Bus": {
+      "Category": "VEHICLES",
+      "SubCategory": "BUS"
+    },
+    "Motorcycle": {
+      "Category": "VEHICLES",
+      "SubCategory": "MOTORCYCLE"
+    },
+    "Bicycle": {
+      "Category": "VEHICLES",
+      "SubCategory": "BICYCLE"
+    },
+    "Car passing by": {
+      "Category": "VEHICLES",
+      "SubCategory": "CAR"
+    },
+    "Power windows": {
+      "Category": "VEHICLES",
+      "SubCategory": null
+    },
+    "Skateboard": {
+      "Category": "SPORTS",
+      "SubCategory": "SKATE"
+    },
+    "Basketball bounce": {
+      "Category": "SPORTS",
+      "SubCategory": null
+    },
+    "Engine": {
+      "Category": "MOTORS",
+      "SubCategory": null
+    },
+    "Engine knocking": {
+      "Category": "MOTORS",
+      "SubCategory": null
+    },
+    "Light engine": {
+      "Category": "MOTORS",
+      "SubCategory": null
+    },
+    "Heavy engine": {
+      "Category": "MOTORS",
+      "SubCategory": null
+    },
+    "Explosion": {
+      "Category": "EXPLOSIONS",
+      "SubCategory": null
+    },
+    "Gunshot": {
+      "Category": "GUNS",
+      "SubCategory": "GUNSHOT"
+    },
+    "Gunshot_and_gunfire": {
+      "Category": "GUNS",
+      "SubCategory": "GUNSHOT"
+    },
+    "Gun": {
+      "Category": "GUNS",
+      "SubCategory": "GUNSHOT"
+    },
+    "Machine gun": {
+      "Category": "GUNS",
+      "SubCategory": "AUTOMATIC"
+    },
+    "Fusillade": {
+      "Category": "GUNS",
+      "SubCategory": null
+    },
+    "Fireworks": {
+      "Category": "FIREWORKS",
+      "SubCategory": null
+    },
+    "Door": {
+      "Category": "DOORS",
+      "SubCategory": null
+    },
+    "Doorbell": {
+      "Category": "DOORS",
+      "SubCategory": "DOORBELL"
+    },
+    "Knock": {
+      "Category": "DOORS",
+      "SubCategory": "KNOCK"
+    },
+    "Ding-dong": {
+      "Category": "DOORS",
+      "SubCategory": "DOORBELL"
+    },
+    "Squeak": {
+      "Category": "FOLEY",
+      "SubCategory": "SQUEAK"
+    },
+    "Dishes": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Dishes_and_pots_and_pans": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Cutlery": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Cutlery_and_silverware": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Zipper": {
+      "Category": "FOLEY",
+      "SubCategory": "ZIPPER"
+    },
+    "Zipper_(clothing)": {
+      "Category": "FOLEY",
+      "SubCategory": "ZIPPER"
+    },
+    "Keys jangling": {
+      "Category": "FOLEY",
+      "SubCategory": "KEYS"
+    },
+    "Coin": {
+      "Category": "FOLEY",
+      "SubCategory": "COIN"
+    },
+    "Coin_(dropping)": {
+      "Category": "FOLEY",
+      "SubCategory": "COIN"
+    },
+    "Domestic_sounds_and_home_sounds": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Smash": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Whack": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Clatter": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Slap": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Crushing": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Crunch": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Scrape": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Squeal": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Bouncing": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Tearing": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Chink": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Crack": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Biting": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Breaking": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Rattle": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Steam whistle": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Rub": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Scissors": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Cupboard open or close": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Finger snapping": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Clicking": {
+      "Category": "FOLEY",
+      "SubCategory": "CLICK"
+    },
+    "Toothbrush": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Cash register": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Single-lens reflex camera": {
+      "Category": "FOLEY",
+      "SubCategory": "CAMERA"
+    },
+    "Crumpling_and_crinkling": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "Water": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "Water tap": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "Water_tap_and_faucet": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "Splash": {
+      "Category": "WATER",
+      "SubCategory": "SPLASH"
+    },
+    "Stream": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "Trickle": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "Boiling": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "Gurgling": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "Liquid": {
+      "Category": "LIQUID & MUD",
+      "SubCategory": null
+    },
+    "Rain": {
+      "Category": "RAIN",
+      "SubCategory": null
+    },
+    "Raindrop": {
+      "Category": "RAIN",
+      "SubCategory": null
+    },
+    "Wind": {
+      "Category": "WIND",
+      "SubCategory": null
+    },
+    "Thunder": {
+      "Category": "WEATHER",
+      "SubCategory": "THUNDER"
+    },
+    "Thunderstorm": {
+      "Category": "WEATHER",
+      "SubCategory": "STORM"
+    },
+    "Fire": {
+      "Category": "FIRE",
+      "SubCategory": null
+    },
+    "Crowd": {
+      "Category": "CROWDS",
+      "SubCategory": null
+    },
+    "Applause": {
+      "Category": "CROWDS",
+      "SubCategory": "APPLAUSE"
+    },
+    "Cheering": {
+      "Category": "CROWDS",
+      "SubCategory": "CHEERING"
+    },
+    "Alarm": {
+      "Category": "ALARMS",
+      "SubCategory": null
+    },
+    "Siren": {
+      "Category": "ALARMS",
+      "SubCategory": "SIREN"
+    },
+    "Car alarm": {
+      "Category": "ALARMS",
+      "SubCategory": null
+    },
+    "Alarm clock": {
+      "Category": "ALARMS",
+      "SubCategory": null
+    },
+    "Fire alarm": {
+      "Category": "ALARMS",
+      "SubCategory": null
+    },
+    "Smoke detector": {
+      "Category": "ALARMS",
+      "SubCategory": null
+    },
+    "Telephone": {
+      "Category": "COMMUNICATIONS",
+      "SubCategory": "TELEPHONE"
+    },
+    "Television": {
+      "Category": "COMMUNICATIONS",
+      "SubCategory": "TELEVISION"
+    },
+    "Radio": {
+      "Category": "COMMUNICATIONS",
+      "SubCategory": "RADIO"
+    },
+    "Whoosh": {
+      "Category": "SWOOSHES",
+      "SubCategory": null
+    },
+    "Whoosh_and_swoosh_and_swish": {
+      "Category": "SWOOSHES",
+      "SubCategory": null
+    },
+    "Hammer": {
+      "Category": "TOOLS",
+      "SubCategory": "HAMMER"
+    },
+    "Chainsaw": {
+      "Category": "TOOLS",
+      "SubCategory": null
+    },
+    "Jackhammer": {
+      "Category": "TOOLS",
+      "SubCategory": null
+    },
+    "Dental drill": {
+      "Category": "TOOLS",
+      "SubCategory": null
+    },
+    "Train": {
+      "Category": "TRAINS",
+      "SubCategory": null
+    },
+    "Helicopter": {
+      "Category": "AIRCRAFT",
+      "SubCategory": "HELICOPTER"
+    },
+    "Aircraft": {
+      "Category": "AIRCRAFT",
+      "SubCategory": null
+    },
+    "Jet engine": {
+      "Category": "AIRCRAFT",
+      "SubCategory": null
+    },
+    "Vacuum cleaner": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Blender": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Hair dryer": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Electric toothbrush": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Mechanical fan": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Lawn mower": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Air conditioning": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Electric shaver": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Microwave oven": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Sewing machine": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Pulleys": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Mechanisms": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Whir": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "Clock": {
+      "Category": "CLOCKS",
+      "SubCategory": null
+    },
+    "Typing": {
+      "Category": "COMPUTERS",
+      "SubCategory": null
+    },
+    "Printer": {
+      "Category": "COMPUTERS",
+      "SubCategory": null
+    },
+    "Whistle": {
+      "Category": "WHISTLES",
+      "SubCategory": null
+    },
+    "Glass": {
+      "Category": "GLASS",
+      "SubCategory": null
+    },
+    "Metal": {
+      "Category": "METAL",
+      "SubCategory": null
+    },
+    "Wood": {
+      "Category": "WOOD",
+      "SubCategory": null
+    },
+    "Chop": {
+      "Category": "WOOD",
+      "SubCategory": null
+    },
+    "Hum": {
+      "Category": "ELECTRICITY",
+      "SubCategory": "BUZZ & HUM"
+    },
+    "Change ringing": {
+      "Category": "BELLS",
+      "SubCategory": null
+    },
+    "Church bell": {
+      "Category": "BELLS",
+      "SubCategory": "BELL"
+    },
+    "Jingle bell": {
+      "Category": "BELLS",
+      "SubCategory": null
+    },
+    "Jingle": {
+      "Category": "BELLS",
+      "SubCategory": null
+    },
+    "Bicycle bell": {
+      "Category": "BELLS",
+      "SubCategory": "BELL"
+    },
+    "Ding": {
+      "Category": "BELLS",
+      "SubCategory": null
+    },
+    "Foghorn": {
+      "Category": "HORNS",
+      "SubCategory": null
+    },
+    "Air horn": {
+      "Category": "HORNS",
+      "SubCategory": null
+    },
+    "Vehicle horn": {
+      "Category": "HORNS",
+      "SubCategory": null
+    },
+    "Drawer open or close": {
+      "Category": "DRAWERS",
+      "SubCategory": null
+    },
+    "Chopping": {
+      "Category": "FOOD & DRINK",
+      "SubCategory": "COOKING"
+    },
+    "Frying": {
+      "Category": "FOOD & DRINK",
+      "SubCategory": "COOKING"
+    },
+    "Stir": {
+      "Category": "FOOD & DRINK",
+      "SubCategory": "COOKING"
+    },
+    "Rustle": {
+      "Category": "AMBIENCE",
+      "SubCategory": null
+    },
+    "Rustling leaves": {
+      "Category": "AMBIENCE",
+      "SubCategory": null
+    },
+    "Traffic noise": {
+      "Category": "AMBIENCE",
+      "SubCategory": null
+    },
+    "Heart murmur": {
+      "Category": "HUMAN",
+      "SubCategory": null
+    },
+    "Thump_and_thud": {
+      "Category": "FOLEY",
+      "SubCategory": "MISC"
+    },
+    "Chewing_and_mastication": {
+      "Category": "FOLEY",
+      "SubCategory": "MISC"
+    },
+    "Human_group_actions": {
+      "Category": "CROWDS",
+      "SubCategory": "MISC"
+    },
+    "Heart sounds": {
+      "Category": "HUMAN",
+      "SubCategory": "HEARTBEAT"
+    },
+    "Throat clearing": {
+      "Category": "HUMAN",
+      "SubCategory": "MISC"
+    },
+    "Stomach rumble": {
+      "Category": "HUMAN",
+      "SubCategory": "MISC"
+    },
+    "Belly laugh": {
+      "Category": "VOICES",
+      "SubCategory": "LAUGH"
+    },
+    "Male singing": {
+      "Category": "VOICES",
+      "SubCategory": "SINGING"
+    },
+    "Female singing": {
+      "Category": "VOICES",
+      "SubCategory": "SINGING"
+    },
+    "Yodeling": {
+      "Category": "VOICES",
+      "SubCategory": "SINGING"
+    },
+    "Synthetic singing": {
+      "Category": "VOICES",
+      "SubCategory": "SINGING"
+    },
+    "Oink": {
+      "Category": "ANIMALS",
+      "SubCategory": "FARM"
+    },
+    "Gobble": {
+      "Category": "ANIMALS",
+      "SubCategory": "FARM"
+    },
+    "Bow-wow": {
+      "Category": "ANIMALS",
+      "SubCategory": "DOG"
+    },
+    "Yip": {
+      "Category": "ANIMALS",
+      "SubCategory": "DOG"
+    },
+    "Canidae": {
+      "Category": "ANIMALS",
+      "SubCategory": "DOG"
+    },
+    "Neigh": {
+      "Category": "ANIMALS",
+      "SubCategory": "HORSE"
+    },
+    "Roaring cats": {
+      "Category": "ANIMALS",
+      "SubCategory": "CAT WILD"
+    },
+    "Caterwaul": {
+      "Category": "ANIMALS",
+      "SubCategory": "CAT WILD"
+    },
+    "Quack": {
+      "Category": "BIRDS",
+      "SubCategory": "FOWL"
+    },
+    "Train whistle": {
+      "Category": "TRAINS",
+      "SubCategory": "HORN"
+    },
+    "Train horn": {
+      "Category": "TRAINS",
+      "SubCategory": "HORN"
+    },
+    "Train wheels squealing": {
+      "Category": "TRAINS",
+      "SubCategory": "BRAKE"
+    },
+    "Rail transport": {
+      "Category": "TRAINS",
+      "SubCategory": "MISC"
+    },
+    "Railroad car": {
+      "Category": "TRAINS",
+      "SubCategory": "MISC"
+    },
+    "Tire squeal": {
+      "Category": "VEHICLES",
+      "SubCategory": "SKID"
+    },
+    "Skidding": {
+      "Category": "VEHICLES",
+      "SubCategory": "SKID"
+    },
+    "Air brake": {
+      "Category": "VEHICLES",
+      "SubCategory": "BRAKE"
+    },
+    "Reversing beeps": {
+      "Category": "VEHICLES",
+      "SubCategory": "ALARM"
+    },
+    "Race car": {
+      "Category": "VEHICLES",
+      "SubCategory": "RACING"
+    },
+    "Accelerating": {
+      "Category": "VEHICLES",
+      "SubCategory": "CAR"
+    },
+    "Medium engine": {
+      "Category": "VEHICLES",
+      "SubCategory": "CAR"
+    },
+    "Motor vehicle": {
+      "Category": "VEHICLES",
+      "SubCategory": "CAR"
+    },
+    "Engine starting": {
+      "Category": "MOTORS",
+      "SubCategory": "COMBUSTION"
+    },
+    "Ice cream truck": {
+      "Category": "VEHICLES",
+      "SubCategory": "MISC"
+    },
+    "Telephone bell ringing": {
+      "Category": "COMMUNICATIONS",
+      "SubCategory": "TELEPHONE"
+    },
+    "Telephone dialing": {
+      "Category": "COMMUNICATIONS",
+      "SubCategory": "TELEPHONE"
+    },
+    "Dial tone": {
+      "Category": "COMMUNICATIONS",
+      "SubCategory": "TELEPHONE"
+    },
+    "Busy signal": {
+      "Category": "COMMUNICATIONS",
+      "SubCategory": "TELEPHONE"
+    },
+    "Computer keyboard": {
+      "Category": "COMPUTERS",
+      "SubCategory": "KEYBOARD & MOUSE"
+    },
+    "Sliding door": {
+      "Category": "DOORS",
+      "SubCategory": "SLIDING"
+    },
+    "Sawing": {
+      "Category": "TOOLS",
+      "SubCategory": "POWER"
+    },
+    "Sanding": {
+      "Category": "TOOLS",
+      "SubCategory": "POWER"
+    },
+    "Wind chime": {
+      "Category": "MUSICAL",
+      "SubCategory": "CHIME"
+    },
+    "Didgeridoo": {
+      "Category": "MUSICAL",
+      "SubCategory": "WOODWIND"
+    },
+    "Bass guitar": {
+      "Category": "MUSICAL",
+      "SubCategory": "PLUCKED"
+    },
+    "Acoustic guitar": {
+      "Category": "MUSICAL",
+      "SubCategory": "PLUCKED"
+    },
+    "Electric guitar": {
+      "Category": "MUSICAL",
+      "SubCategory": "PLUCKED"
+    },
+    "Steelpan": {
+      "Category": "MUSICAL",
+      "SubCategory": "PERCUSSION TUNED"
+    },
+    "Sampler": {
+      "Category": "MUSICAL",
+      "SubCategory": "SAMPLE"
+    },
+    "Electronic tuner": {
+      "Category": "MUSICAL",
+      "SubCategory": "INSTRUMENT"
+    },
+    "Aircraft engine": {
+      "Category": "AIRCRAFT",
+      "SubCategory": "MISC"
+    },
+    "Fixed-wing aircraft": {
+      "Category": "AIRCRAFT",
+      "SubCategory": "MISC"
+    },
+    "Cap gun": {
+      "Category": "GUNS",
+      "SubCategory": "MISC"
+    },
+    "Shuffling cards": {
+      "Category": "GAMES",
+      "SubCategory": "MISC"
+    },
+    "Mains hum": {
+      "Category": "ELECTRICITY",
+      "SubCategory": "BUZZ & HUM"
+    },
+    "Sine wave": {
+      "Category": "DESIGNED",
+      "SubCategory": "TONAL"
+    },
+    "Chirp tone": {
+      "Category": "DESIGNED",
+      "SubCategory": "TONAL"
+    },
+    "White noise": {
+      "Category": "DESIGNED",
+      "SubCategory": "SYNTHETIC"
+    },
+    "Pink noise": {
+      "Category": "DESIGNED",
+      "SubCategory": "SYNTHETIC"
+    },
+    "Sidetone": {
+      "Category": "DESIGNED",
+      "SubCategory": "SYNTHETIC"
+    },
+    "Reverberation": {
+      "Category": "DESIGNED",
+      "SubCategory": "MISC"
+    },
+    "Chorus effect": {
+      "Category": "DESIGNED",
+      "SubCategory": "MISC"
+    },
+    "Effects unit": {
+      "Category": "DESIGNED",
+      "SubCategory": "MISC"
+    },
+    "Swing music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Flamenco": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Salsa music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Christmas music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Carnatic music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Bluegrass": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Punk rock": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Drum and bass": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "House music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Electronic dance music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Rock and roll": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Gospel music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Wedding music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Background music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Video game music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Theme music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Lullaby": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Ska": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Afrobeat": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Independent music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Christian music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Dance music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Rhythm and blues": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Scary music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Funny music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Music of Latin America": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Music of Bollywood": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Music of Africa": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Music of Asia": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Middle Eastern music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Music for children": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "Soundtrack music": {
+      "Category": "MUSIC",
+      "SubCategory": null
+    }
+  }
+}
