@@ -1,0 +1,15 @@
+{
+    "column_names": {
+        "filename": "filename",
+        "category": "Category",
+        "subcategory": "SubCategory"
+    },
+    "split_ratios": {
+        "train": 0.70,
+        "val": 0.15,
+        "test": 0.15
+    },
+    "random_seed": 42,
+    "min_group_for_stratify": 5,
+    "output_dir": "output"
+}
