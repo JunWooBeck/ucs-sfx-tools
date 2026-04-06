@@ -4,7 +4,7 @@
     {
       "set_name": "FSD50K.dev",
       "input_csv": "<YOUR_PATH>/FSD50K/FSD50K.ground_truth/dev.csv",
-      "audio_dir": "<YOUR_PATH>/FSD50K/FSD50K.dev_audio",
+      "audio_dir": "<YOUR_AUDIO_PATH>/FSD50K/FSD50K.dev_audio",
       "output_classified_csv": "FSD50K.dev_UCS_classified.csv",
       "output_unclassified_csv": "FSD50K.dev_UCS_unclassified.csv",
       "output_unclassified_summary": "FSD50K.dev_unclassified_summary.csv"
@@ -12,7 +12,7 @@
     {
       "set_name": "FSD50K.eval",
       "input_csv": "<YOUR_PATH>/FSD50K/FSD50K.ground_truth/eval.csv",
-      "audio_dir": "<YOUR_PATH>/FSD50K/FSD50K.eval_audio",
+      "audio_dir": "<YOUR_AUDIO_PATH>/FSD50K/FSD50K.eval_audio",
       "output_classified_csv": "FSD50K.eval_UCS_classified.csv",
       "output_unclassified_csv": "FSD50K.eval_UCS_unclassified.csv",
       "output_unclassified_summary": "FSD50K.eval_unclassified_summary.csv"
@@ -20,7 +20,7 @@
     {
       "set_name": "AudioSet.balanced_train",
       "input_csv": "<YOUR_PATH>/AudioSet/audioset_balanced_train_preprocessed.csv",
-      "audio_dir": "<YOUR_PATH>/AudioSet/audios/balanced_train_segments",
+      "audio_dir": "<YOUR_AUDIO_PATH>/AudioSet/audios/balanced_train_segments",
       "output_classified_csv": "AudioSet.balanced_train_UCS_classified.csv",
       "output_unclassified_csv": "AudioSet.balanced_train_UCS_unclassified.csv",
       "output_unclassified_summary": "AudioSet.balanced_train_unclassified_summary.csv"
@@ -28,10 +28,18 @@
     {
       "set_name": "AudioSet.eval",
       "input_csv": "<YOUR_PATH>/AudioSet/audioset_eval_preprocessed.csv",
-      "audio_dir": "<YOUR_PATH>/AudioSet/audios/eval_segments",
+      "audio_dir": "<YOUR_AUDIO_PATH>/AudioSet/audios/eval_segments",
       "output_classified_csv": "AudioSet.eval_UCS_classified.csv",
       "output_unclassified_csv": "AudioSet.eval_UCS_unclassified.csv",
       "output_unclassified_summary": "AudioSet.eval_unclassified_summary.csv"
+    },
+    {
+      "set_name": "ESC-50",
+      "input_csv": "<YOUR_PATH>/ESC-50/esc50_input.csv",
+      "audio_dir": "<YOUR_AUDIO_PATH>/ESC-50/audio",
+      "output_classified_csv": "ESC-50_UCS_classified.csv",
+      "output_unclassified_csv": "ESC-50_UCS_unclassified.csv",
+      "output_unclassified_summary": "ESC-50_unclassified_summary.csv"
     }
   ],
   "audio_paths": {
@@ -1524,6 +1532,182 @@
     },
     "Soundtrack music": {
       "Category": "MUSIC",
+      "SubCategory": null
+    },
+    "brushing_teeth": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "brushing teeth": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "can_opening": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "can opening": {
+      "Category": "FOLEY",
+      "SubCategory": null
+    },
+    "car_horn": {
+      "Category": "HORNS",
+      "SubCategory": null
+    },
+    "car horn": {
+      "Category": "HORNS",
+      "SubCategory": null
+    },
+    "chirping_birds": {
+      "Category": "BIRDS",
+      "SubCategory": null
+    },
+    "chirping birds": {
+      "Category": "BIRDS",
+      "SubCategory": null
+    },
+    "church_bells": {
+      "Category": "BELLS",
+      "SubCategory": "BELL"
+    },
+    "church bells": {
+      "Category": "BELLS",
+      "SubCategory": "BELL"
+    },
+    "clock_alarm": {
+      "Category": "ALARMS",
+      "SubCategory": null
+    },
+    "clock alarm": {
+      "Category": "ALARMS",
+      "SubCategory": null
+    },
+    "clock_tick": {
+      "Category": "CLOCKS",
+      "SubCategory": null
+    },
+    "clock tick": {
+      "Category": "CLOCKS",
+      "SubCategory": null
+    },
+    "crackling_fire": {
+      "Category": "FIRE",
+      "SubCategory": null
+    },
+    "crackling fire": {
+      "Category": "FIRE",
+      "SubCategory": null
+    },
+    "crying_baby": {
+      "Category": "VOICES",
+      "SubCategory": "CRYING"
+    },
+    "crying baby": {
+      "Category": "VOICES",
+      "SubCategory": "CRYING"
+    },
+    "door_wood_creaks": {
+      "Category": "DOORS",
+      "SubCategory": null
+    },
+    "door wood creaks": {
+      "Category": "DOORS",
+      "SubCategory": null
+    },
+    "door_wood_knock": {
+      "Category": "DOORS",
+      "SubCategory": "KNOCK"
+    },
+    "door wood knock": {
+      "Category": "DOORS",
+      "SubCategory": "KNOCK"
+    },
+    "drinking_sipping": {
+      "Category": "FOOD & DRINK",
+      "SubCategory": null
+    },
+    "drinking sipping": {
+      "Category": "FOOD & DRINK",
+      "SubCategory": null
+    },
+    "glass_breaking": {
+      "Category": "GLASS",
+      "SubCategory": null
+    },
+    "glass breaking": {
+      "Category": "GLASS",
+      "SubCategory": null
+    },
+    "hand_saw": {
+      "Category": "TOOLS",
+      "SubCategory": null
+    },
+    "hand saw": {
+      "Category": "TOOLS",
+      "SubCategory": null
+    },
+    "insects": {
+      "Category": "ANIMALS",
+      "SubCategory": "INSECT"
+    },
+    "keyboard_typing": {
+      "Category": "COMPUTERS",
+      "SubCategory": null
+    },
+    "keyboard typing": {
+      "Category": "COMPUTERS",
+      "SubCategory": null
+    },
+    "mouse_click": {
+      "Category": "FOLEY",
+      "SubCategory": "CLICK"
+    },
+    "mouse click": {
+      "Category": "FOLEY",
+      "SubCategory": "CLICK"
+    },
+    "pouring_water": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "pouring water": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "sea_waves": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "sea waves": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "sneezing": {
+      "Category": "HUMAN",
+      "SubCategory": "SNEEZE"
+    },
+    "toilet_flush": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "toilet flush": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "washing_machine": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "washing machine": {
+      "Category": "MACHINES",
+      "SubCategory": null
+    },
+    "water_drops": {
+      "Category": "WATER",
+      "SubCategory": null
+    },
+    "water drops": {
+      "Category": "WATER",
       "SubCategory": null
     }
   }

@@ -1,0 +1,65 @@
+{
+  "dataset_name": "EnvSound",
+  "description": "Environmental Sound dataset combining FSD50K + AudioSet + ESC-50, filtered to exclude MUSICAL and non-environmental VOICES",
+  "sources": [
+    {
+      "name": "FSD50K.dev",
+      "csv_path": "<YOUR_PATH>/fsd50k-ucs/metadata/FSD50K.dev_UCS_classified.csv",
+      "audio_dir": "<YOUR_AUDIO_PATH>/FSD50K/FSD50K.dev_audio"
+    },
+    {
+      "name": "FSD50K.eval",
+      "csv_path": "<YOUR_PATH>/fsd50k-ucs/metadata/FSD50K.eval_UCS_classified.csv",
+      "audio_dir": "<YOUR_AUDIO_PATH>/FSD50K/FSD50K.eval_audio"
+    },
+    {
+      "name": "AudioSet.balanced_train",
+      "csv_path": "<YOUR_PATH>/audioset-ucs/metadata/AudioSet.balanced_train_UCS_classified.csv",
+      "audio_dir": "<YOUR_AUDIO_PATH>/AudioSet/audios/balanced_train_segments"
+    },
+    {
+      "name": "AudioSet.eval",
+      "csv_path": "<YOUR_PATH>/audioset-ucs/metadata/AudioSet.eval_UCS_classified.csv",
+      "audio_dir": "<YOUR_AUDIO_PATH>/AudioSet/audios/eval_segments"
+    },
+    {
+      "name": "ESC-50",
+      "csv_path": "<YOUR_PATH>/esc50-ucs/metadata/ESC-50_UCS_classified.csv",
+      "audio_dir": "<YOUR_AUDIO_PATH>/ESC-50/audio"
+    }
+  ],
+  "filter": {
+    "mode": "exclude",
+    "exclude_categories": [
+      "MUSICAL"
+    ],
+    "exclude_categories_except": {
+      "VOICES": {
+        "keep_subcategories": [
+          "CRYING",
+          "LAUGH"
+        ]
+      }
+    }
+  },
+  "split": {
+    "enabled": true,
+    "ratios": {
+      "train": 0.7,
+      "val": 0.15,
+      "test": 0.15
+    },
+    "seed": 42,
+    "min_group_for_stratify": 5
+  },
+  "output": {
+    "output_dir": "<YOUR_OUTPUT_PATH>/data",
+    "report_dir": "<YOUR_OUTPUT_PATH>/reports"
+  },
+  "column_names": {
+    "filename": "filename",
+    "category": "Category",
+    "subcategory": "SubCategory",
+    "keywords": "Keywords"
+  }
+}
