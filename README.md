@@ -15,6 +15,7 @@ Tag-to-UCS conversion framework for sound effects datasets, with stratified spli
 └── UCS_Split/
     ├── ucs_split.py            # Stratified train/val/test splitter
     ├── combine_and_split.py    # Multi-source dataset builder
+    ├── config.json             # Split configuration (ratios, seed)
     └── config_envsound.json    # EnvSound-UCS build configuration
 ```
 
